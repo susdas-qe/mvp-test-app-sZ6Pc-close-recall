@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-cexm
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/susdas_quay_org/mvp-dev-syli-tenant/mvp-test-app/test-mvp-component-cexm@sha256:9adb20fdc344bdc8b02f8acc38ebc59abec102aa9d3a792cd69bf583b5e97a60
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
